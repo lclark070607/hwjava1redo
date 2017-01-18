@@ -143,44 +143,24 @@ or "false" if its not.
 
 Step 1:  create word variable
 Step 2:  create a loop to iterate over word
-Step 3:  condition1:  if string length is 1, print true
-Step 4:  condition2:  determine if string length is odd, ignore middle character 
-Step 5:  condition3:  determine if string length is even, compare indexes(first/last) (first +1, last -1) etc, print true if they match
+Step 3:  condition1: compare indexes(first/last) (first +1, last -1) etc, print true if they match
 Step 6:  
  Determine if first and last letters are the same, if not print false
 
 
 */
-let string = 'a';
-let end = word.length - 1;
+let string = 'abbar';
+let palindrome = true;
 
 for (i = 0; i < string.length; i++) {
-    //determine if length of string is 1, then it's a palindrome
-    if (string.length === 1) {
-        alert('Yes, this is a palindrome!');
-        return true;
-    }; 
 
-console.log(string);
+//if the first and last index don't match, palindrome is false    
+    if  (string[i] !== string[string.length - i -1]) {
+      palindrome = false;
+    }
+};
+    console.log(palindrome);
     
-    
-//     else {
-//     //determine if string is even or odd
-//     if (string.length % 2 === 0)
-
-//     }
-
-//     console.log(palindrome);
-    
-//     //determine if index 0 and last index are the same
-//     if (string[0] === word[end]) {
-//        string = true;
-//     }
-
-//     if (string[0] !== word[end]) {
-//         string = false;
-//     }
-// }
 
 
 
